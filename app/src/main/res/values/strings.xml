@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hitung Volume App</string>
+    <string name="length">Length</string>
+    <string name="width">Width</string>
+    <string name="heigth">Heigth</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result</string>
+    <string name="hint_length">Input the length</string>
+    <string name="hint_width">Input the width</string>
+</resources>
