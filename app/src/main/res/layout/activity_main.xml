@@ -16,8 +16,7 @@
         android:id="@+id/edt_length"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="@string/hint_length"
+        android:inputType="number"
         android:lines="1" />
 
     <TextView
@@ -30,8 +29,7 @@
         android:id="@+id/edt_width"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="@string/hint_width"
+        android:inputType="number"
         android:lines="1" />
 
     <TextView
@@ -44,8 +42,7 @@
         android:id="@+id/edt_heigth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Input the heigth"
+        android:inputType="number"
         android:lines="1" />
 
     <Button

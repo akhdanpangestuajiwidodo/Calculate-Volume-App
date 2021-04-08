@@ -7,4 +7,5 @@
     <string name="result">Result</string>
     <string name="hint_length">Input the length</string>
     <string name="hint_width">Input the width</string>
+    <string name="resultCalculate">%1$.2f</string>
 </resources>
