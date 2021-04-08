@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    
 
     private lateinit var edtWidth: EditText
     private lateinit var edtHeight: EditText
@@ -28,12 +29,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateInput(){
+
+        var isEmptyFields = false
+
         val width = edtWidth.text.toString()
+        if (width.isEmpty()){
+           isEmptyFields = true
+           edtWidth.error = " Width Field cannot empty"
+        }
+
         val length = edtLength.text.toString()
+        if (length.isEmpty()){
+            isEmptyFields = true
+            edtLength.error = "Length Field cannot empty"
+        }
+
         val height = edtHeight.text.toString()
+        if (height.isEmpty()){
+            isEmptyFields = true
+            edtHeight.error = " Height Field cannot empty"
+        }
 
-        val result = width.toDouble() * length.toDouble() * height.toDouble()
+        if (!isEmptyFields){
+            val result = width.toDouble() * length.toDouble() * height.toDouble()
+            tvResult.text = result.toString()
+        }
 
-        tvResult.text = result.toString()
     }
 }
