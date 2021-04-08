@@ -2,12 +2,16 @@ package org.d3if0008.hitungvolumeapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    
+
+    companion object{
+        private const val RESULT_STATE = "result_state"
+    }
 
     private lateinit var edtWidth: EditText
     private lateinit var edtHeight: EditText
@@ -26,6 +30,11 @@ class MainActivity : AppCompatActivity() {
         tvResult = findViewById(R.id.tv_result)
 
         btnCalculate.setOnClickListener { calculateInput() }
+
+        if (savedInstanceState != null){
+            val getResult = savedInstanceState.getString(RESULT_STATE)
+            tvResult.text = getResult
+        }
     }
 
     private fun calculateInput(){
@@ -55,5 +64,10 @@ class MainActivity : AppCompatActivity() {
             tvResult.text = result.toString()
         }
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(RESULT_STATE, tvResult.text.toString())
     }
 }
